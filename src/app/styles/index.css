@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap");
+
+@import "../../shared/styles/base.css";
+@import "../../shared/styles/components.css";
+@import "../../shared/styles/data-display.css";
+@import "../../features/auth/styles/auth.css";
+@import "./shell.css";
+@import "../../features/dashboard/styles/home.css";
+@import "../../features/products/styles/product-list.css";
+@import "../../features/products/styles/product-form.css";
+@import "../../features/products/styles/product-detail.css";
+@import "../../shared/styles/feedback.css";
+@import "../../features/products/styles/product-skeletons.css";
+@import "../../shared/styles/preferences.css";
+@import "../../shared/styles/theme.css";
+@import "./responsive.css";
