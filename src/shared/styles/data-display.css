@@ -1,0 +1,115 @@
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding: 4px 10px;
+    color: #596675;
+    font-size: var(--font-overline);
+    font-weight: 700;
+    line-height: 1.2;
+    background: #f0f2f4;
+    border: 1px solid #e5e8ec;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.badge--success {
+    color: #21705d;
+    background: #e9f6f1;
+    border-color: #d7eee6;
+}
+
+.badge--warning {
+    color: var(--color-warning);
+    background: #fff4e4;
+    border-color: #f9e5c4;
+}
+
+.badge--danger {
+    color: var(--color-danger);
+    background: var(--color-danger-soft);
+    border-color: #f6dadd;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 68px;
+    padding: 13px 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.pagination p {
+    margin: 0;
+    color: #8b96a4;
+    font-size: var(--font-small);
+}
+
+.pagination p strong {
+    color: #4b5968;
+    font-variant-numeric: tabular-nums;
+}
+
+.pagination__controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.pagination__page {
+    min-width: 48px;
+    color: #788493;
+    font-size: var(--font-small);
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+}
+
+/* Empty states */
+.empty-state {
+    display: flex;
+    min-height: 340px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 42px 20px;
+    text-align: center;
+}
+
+.empty-state__icon {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 18px;
+    color: var(--color-primary);
+    background: var(--color-primary-soft);
+    border-radius: 14px;
+    place-items: center;
+}
+
+.empty-state__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.empty-state h2 {
+    margin-bottom: 7px;
+    color: #344054;
+    font-family: var(--font-heading);
+    font-size: 18px;
+}
+
+.empty-state > p {
+    max-width: 450px;
+    margin-bottom: 0;
+    color: var(--color-muted);
+    font-size: var(--font-label);
+    line-height: 1.6;
+}
+
+.empty-state__action {
+    margin-top: 20px;
+}

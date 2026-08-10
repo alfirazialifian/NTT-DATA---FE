@@ -1,0 +1,324 @@
+/* Night mode */
+html[data-theme="dark"] {
+    color: #e5ecef;
+    background: #0f171d;
+    --color-primary: #62cbb0;
+    --color-primary-dark: #86ddc6;
+    --color-primary-soft: #193630;
+    --color-navy: #e8f2ef;
+    --color-text: #e5ecef;
+    --color-muted: #9aa8b1;
+    --color-subtle: #75858f;
+    --color-border: #2b3942;
+    --color-surface: #172229;
+    --color-background: #0f171d;
+    --color-danger: #ef7d86;
+    --color-danger-soft: #3c2329;
+    --color-warning: #efb65e;
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 20%);
+    --shadow-md: 0 18px 45px rgb(0 0 0 / 24%);
+}
+
+html,
+body,
+.app-shell,
+.app-shell__body,
+.login-page,
+.login-panel,
+.sidebar,
+.navbar,
+.data-card,
+.form-section,
+.product-detail-grid,
+.detail-section,
+.dialog,
+.standalone-page,
+.standalone-page .empty-state {
+    transition:
+        color 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .app-shell,
+html[data-theme="dark"] .app-shell__body,
+html[data-theme="dark"] .standalone-page {
+    color: var(--color-text);
+    background: var(--color-background);
+}
+
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .feature-card,
+html[data-theme="dark"] .data-card,
+html[data-theme="dark"] .form-section,
+html[data-theme="dark"] .product-detail-grid,
+html[data-theme="dark"] .detail-section,
+html[data-theme="dark"] .dialog,
+html[data-theme="dark"] .standalone-page .empty-state {
+    background: var(--color-surface);
+    border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .navbar {
+    background: rgb(18 28 34 / 91%);
+    border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .login-page,
+html[data-theme="dark"] .login-panel {
+    background: #111b21;
+}
+
+html[data-theme="dark"] .login-visual {
+    background:
+        linear-gradient(145deg, rgb(11 28 37 / 98%), rgb(13 58 55 / 96%)),
+        radial-gradient(circle at 80% 10%, #247e6b, transparent 45%);
+}
+
+html[data-theme="dark"] .login-card h2,
+html[data-theme="dark"] .page-header h1,
+html[data-theme="dark"] .feature-card h3,
+html[data-theme="dark"] .form-section__header h2,
+html[data-theme="dark"] .product-summary h2,
+html[data-theme="dark"] .detail-section__header h2,
+html[data-theme="dark"] .empty-state h2,
+html[data-theme="dark"] .dialog h2,
+html[data-theme="dark"] .product-table__price,
+html[data-theme="dark"] .navbar__title strong,
+html[data-theme="dark"] .navbar__profile strong,
+html[data-theme="dark"] .sidebar__profile strong,
+html[data-theme="dark"] .data-card__count strong,
+html[data-theme="dark"] .product-cell strong,
+html[data-theme="dark"] .product-facts dd,
+html[data-theme="dark"] .info-grid strong {
+    color: #e5ecef !important;
+}
+
+html[data-theme="dark"] .login-card__header p,
+html[data-theme="dark"] .page-header p,
+html[data-theme="dark"] .feature-card p,
+html[data-theme="dark"] .form-section__header p,
+html[data-theme="dark"] .form-field__hint,
+html[data-theme="dark"] .product-summary__brand,
+html[data-theme="dark"] .product-summary__description,
+html[data-theme="dark"] .detail-section__header p,
+html[data-theme="dark"] .empty-state > p,
+html[data-theme="dark"] .pagination p,
+html[data-theme="dark"] .data-card__count {
+    color: var(--color-muted);
+}
+
+html[data-theme="dark"] .button--secondary,
+html[data-theme="dark"] .navbar__menu,
+html[data-theme="dark"] .preference-button {
+    color: #c4d0d5;
+    background: #1c2930;
+    border-color: #34444d;
+    box-shadow: none;
+}
+
+html[data-theme="dark"] .button--secondary:hover:not(:disabled),
+html[data-theme="dark"] .preference-button:hover {
+    color: var(--color-primary);
+    background: var(--color-primary-soft);
+    border-color: #356e60;
+}
+
+html[data-theme="dark"] .navbar .preference-controls {
+    background: #111c22;
+    border-color: #2d3d45;
+}
+
+html[data-theme="dark"] .navbar .preference-button {
+    background: transparent;
+    border-color: transparent;
+}
+
+html[data-theme="dark"] .navbar .preference-button:hover {
+    color: var(--color-primary);
+    background: var(--color-primary-soft);
+}
+
+html[data-theme="dark"] .navbar .preference-button--theme.is-active {
+    color: #f4c15c;
+    background: #382f20;
+}
+
+html[data-theme="dark"] .navbar__divider {
+    background: #33434c;
+}
+
+html[data-theme="dark"] .preference-controls--floating {
+    background: rgb(20 32 39 / 82%);
+    border-color: rgb(57 75 85 / 80%);
+    box-shadow: 0 12px 30px rgb(0 0 0 / 24%);
+}
+
+html[data-theme="dark"] .input,
+html[data-theme="dark"] .textarea,
+html[data-theme="dark"] .input-group,
+html[data-theme="dark"] .input-prefix,
+html[data-theme="dark"] .input-suffix,
+html[data-theme="dark"] .search-field {
+    color: var(--color-text);
+    background: #121d23;
+    border-color: #34434c;
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+    color: #657681;
+}
+
+html[data-theme="dark"] .form-field__label,
+html[data-theme="dark"] .sidebar__workspace strong {
+    color: #c6d2d7;
+}
+
+html[data-theme="dark"] .demo-credentials,
+html[data-theme="dark"] .sidebar__workspace {
+    background: #17262c;
+    border-color: #34464c;
+}
+
+html[data-theme="dark"] .demo-credentials code {
+    color: #cbd6da;
+}
+
+html[data-theme="dark"] .sidebar__link:hover {
+    color: #e6edef;
+    background: #1c2a31;
+}
+
+html[data-theme="dark"] .sidebar__link--active {
+    color: var(--color-primary);
+    background: var(--color-primary-soft);
+}
+
+html[data-theme="dark"] .avatar {
+    color: #9ce5d1;
+    background: #1d3a34;
+    border-color: #315d52;
+}
+
+html[data-theme="dark"] .product-table th {
+    color: #7f9099;
+    background: #131e24;
+    border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .product-table td,
+html[data-theme="dark"] .product-table tbody tr,
+html[data-theme="dark"] .pagination {
+    color: #aebbc1;
+    border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .product-table tbody tr:hover {
+    background: #1a272e;
+}
+
+html[data-theme="dark"] .product-cell__image,
+html[data-theme="dark"] .product-gallery__main,
+html[data-theme="dark"] .product-gallery__thumbnails > button,
+html[data-theme="dark"] .media-field__preview,
+html[data-theme="dark"] .info-grid article {
+    background: #121d23;
+    border-color: #2c3c44;
+}
+
+html[data-theme="dark"] .product-gallery img,
+html[data-theme="dark"] .product-cell__image img,
+html[data-theme="dark"] .media-field__preview img {
+    mix-blend-mode: normal;
+}
+
+html[data-theme="dark"] .badge {
+    color: #b7c3c9;
+    background: #243139;
+    border-color: #34434c;
+}
+
+html[data-theme="dark"] .badge--success {
+    color: #85dcc3;
+    background: #19352f;
+    border-color: #285047;
+}
+
+html[data-theme="dark"] .badge--warning {
+    color: #f0bd6d;
+    background: #382e20;
+    border-color: #554326;
+}
+
+html[data-theme="dark"] .badge--danger {
+    color: #f59ba3;
+    background: #3c2329;
+    border-color: #5b3038;
+}
+
+html[data-theme="dark"] .icon-button {
+    color: #8999a2;
+}
+
+html[data-theme="dark"] .icon-button:hover {
+    color: var(--color-primary);
+    background: var(--color-primary-soft);
+    border-color: #315c51;
+}
+
+html[data-theme="dark"] .skeleton {
+    background: #26343b;
+}
+
+html[data-theme="dark"] .skeleton::after {
+    background: linear-gradient(
+        100deg,
+        transparent 15%,
+        rgb(255 255 255 / 8%) 48%,
+        transparent 82%
+    );
+}
+
+html[data-theme="dark"] .alert--error {
+    color: #f2a2a9;
+    background: #3b2328;
+    border-color: #633039;
+}
+
+html[data-theme="dark"] .dialog-backdrop {
+    background: rgb(3 10 14 / 72%);
+}
+
+html[data-theme="dark"] .dialog__close:hover {
+    color: #e4ecef;
+    background: #243139;
+}
+
+html[data-theme="dark"] .toast {
+    background: #1e343e;
+    border-color: #38505b;
+}
+
+html[data-theme="dark"] .overflow-tooltip {
+    color: #172229;
+    background: #e4eeeb;
+    border-color: #f5faf8;
+    box-shadow: 0 12px 30px rgb(0 0 0 / 35%);
+}
+
+html[data-theme="dark"] .overflow-tooltip::after {
+    background: #e4eeeb;
+    border-color: #f5faf8;
+}
+
+html[data-theme="dark"] .standalone-page .empty-state,
+html[data-theme="dark"] .sidebar__footer {
+    border-color: var(--color-border);
+}

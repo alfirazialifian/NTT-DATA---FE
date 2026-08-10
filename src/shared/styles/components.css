@@ -1,0 +1,336 @@
+/* Shared brand */
+.brand {
+    display: inline-flex;
+    gap: 11px;
+    align-items: center;
+    color: var(--color-navy);
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.brand > span:last-child > span {
+    color: var(--color-primary);
+}
+
+.brand__mark {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    color: #fff;
+    background: var(--color-primary);
+    border-radius: 11px;
+    place-items: center;
+}
+
+.brand__mark svg {
+    width: 20px;
+    height: 20px;
+}
+
+.brand--light {
+    color: #fff;
+}
+
+.brand--light .brand__mark {
+    color: var(--color-navy);
+    background: #78d8bd;
+}
+
+.brand--light > span:last-child > span {
+    color: #78d8bd;
+}
+
+/* Buttons */
+.button {
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    line-height: 1;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:
+        color 160ms ease,
+        background 160ms ease,
+        border-color 160ms ease,
+        box-shadow 160ms ease,
+        transform 160ms ease;
+}
+
+.button:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.button svg {
+    width: 17px;
+    height: 17px;
+}
+
+.button--medium {
+    min-height: 42px;
+    padding: 0 17px;
+    font-size: 14px;
+}
+
+.button--small {
+    min-height: 36px;
+    padding: 0 12px;
+    font-size: 13px;
+}
+
+.button--primary {
+    color: #fff;
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 7px 16px rgb(23 107 91 / 16%);
+}
+
+.button--primary:hover:not(:disabled) {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 9px 20px rgb(23 107 91 / 22%);
+}
+
+.button--secondary {
+    color: #344054;
+    background: #fff;
+    border-color: #d8dee5;
+    box-shadow: var(--shadow-sm);
+}
+
+.button--secondary:hover:not(:disabled) {
+    color: var(--color-primary);
+    background: #fafcfb;
+    border-color: #b7c9c4;
+}
+
+.button--danger {
+    color: #fff;
+    background: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.button--danger:hover:not(:disabled) {
+    background: #a92f3a;
+    border-color: #a92f3a;
+}
+
+.button--danger-ghost {
+    color: var(--color-danger);
+    background: var(--color-danger-soft);
+    border-color: transparent;
+}
+
+.button--danger-ghost:hover:not(:disabled) {
+    background: #f9dfe2;
+}
+
+.button__spinner {
+    animation: spin 800ms linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Form primitives */
+.form-field {
+    min-width: 0;
+}
+
+.form-field__label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #344054;
+    font-size: var(--font-label);
+    font-weight: 700;
+}
+
+.form-field__label span {
+    color: var(--color-danger);
+}
+
+.form-field__hint,
+.form-field__error {
+    margin: 7px 0 0;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.form-field__hint {
+    color: var(--color-muted);
+}
+
+.form-field__error {
+    color: var(--color-danger);
+}
+
+.input,
+.textarea,
+.input-group,
+.input-prefix,
+.input-suffix {
+    width: 100%;
+    color: var(--color-text);
+    background: #fff;
+    border: 1px solid #d8dee5;
+    border-radius: 10px;
+    transition:
+        border-color 160ms ease,
+        box-shadow 160ms ease;
+}
+
+.input,
+.input-group input,
+.input-prefix input,
+.input-suffix input {
+    height: 44px;
+}
+
+.input,
+.textarea {
+    padding: 11px 13px;
+}
+
+.textarea {
+    min-height: 112px;
+    line-height: 1.55;
+    resize: vertical;
+}
+
+.input::placeholder,
+.textarea::placeholder,
+.input-group input::placeholder,
+.input-prefix input::placeholder,
+.input-suffix input::placeholder {
+    color: #a2abb7;
+}
+
+.input:hover,
+.textarea:hover,
+.input-group:hover,
+.input-prefix:hover,
+.input-suffix:hover {
+    border-color: #b9c2cc;
+}
+
+.input:focus,
+.textarea:focus,
+.input-group:focus-within,
+.input-prefix:focus-within,
+.input-suffix:focus-within {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(23 107 91 / 10%);
+}
+
+.form-field [aria-invalid="true"],
+.form-field:has([aria-invalid="true"]) .input-group,
+.form-field:has([aria-invalid="true"]) .input-prefix,
+.form-field:has([aria-invalid="true"]) .input-suffix {
+    border-color: var(--color-danger);
+}
+
+.input-group,
+.input-prefix,
+.input-suffix {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.input-group > svg {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin-left: 13px;
+    color: #8994a3;
+}
+
+.input-group input,
+.input-prefix input,
+.input-suffix input {
+    min-width: 0;
+    padding: 0 12px;
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+.input-group__action {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    color: #7d8997;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    place-items: center;
+}
+
+.input-group__action:hover {
+    color: var(--color-primary);
+}
+
+.input-group__action svg {
+    width: 18px;
+    height: 18px;
+}
+
+.input-prefix span,
+.input-suffix span {
+    color: #667085;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-prefix > span {
+    padding-left: 13px;
+}
+
+.input-suffix > span {
+    padding-right: 13px;
+}
+
+.input-prefix input,
+.input-suffix input {
+    flex: 1;
+}
+
+.alert {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 12px 14px;
+    font-size: var(--font-label);
+    line-height: 1.45;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.alert--error {
+    color: #942c36;
+    background: var(--color-danger-soft);
+    border-color: #f6cbd0;
+}
