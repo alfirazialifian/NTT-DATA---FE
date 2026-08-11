@@ -10,6 +10,7 @@ import ThemeSync from "../shared/ui/ThemeSync";
 import ToastContainer from "../shared/ui/ToastContainer";
 import AppLayout from "./layouts/AppLayout";
 import NotFoundPage from "./pages/NotFoundPage";
+import { Analytics } from "@vercel/analytics/react";
 
 function ProtectedRoute() {
   const accessToken = useAuthStore((state) => state.accessToken);
@@ -45,6 +46,7 @@ export default function App() {
 
         <Route element={<NotFoundPage />} path="*" />
       </Routes>
+      <Analytics />
       <ToastContainer />
     </>
   );
